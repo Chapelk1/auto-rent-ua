@@ -1,8 +1,12 @@
 import styled from "@emotion/styled";
-import {  NavLink } from 'react-router-dom';
-export const Section = styled.section`
+import { NavLink } from 'react-router-dom';
+
+
+
+export const Container = styled.section`
     width: 100vw;
-    height: 100vh;
+    padding: 0 20px;
+    margin: 0 auto;
 `
 export const Header = styled.header`
   width: 100%;

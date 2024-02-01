@@ -7,10 +7,25 @@
   --primary-color-btn: #3470FF;
   --secondary-color-btn: #0B44CD;
 }
+html{
+  box-sizing: border-box;
+}
 
-
-*{
+*,::after,::before{
+  box-sizing: inherit;
   /* outline: 1px solid teal; */
+}
+ img{
+  width: 100%;
+  height: auto;
+ }
+
+ ul,ol,li,p,h1,h2,h3,h4,h5,h6{
+  padding: 0;
+  margin: 0;
+ }
+ul,ol{
+  list-style: none;
 }
 
 body {
