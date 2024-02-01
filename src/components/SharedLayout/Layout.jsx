@@ -6,7 +6,7 @@ export const Layout = () => {
         <Header>
           <Navigate>
             <Link to="/">Home</Link>
-            <Link to="cars">Cars</Link>
+            <Link to="catalog">Catalog</Link>
             <Link to="favorites">Favorites</Link>
           </Navigate>
         </Header>

@@ -10,13 +10,13 @@
 
 
 *{
-  outline: 1px solid teal;
+  /* outline: 1px solid teal; */
 }
 
 body {
   margin: 0;
   font-family: "Manrope", sans-serif;
-  /* background-color: rgb(87, 87, 87); */
+  background-color: rgb(87, 87, 87);
 }
 
 code {
