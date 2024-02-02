@@ -12,17 +12,17 @@
 
 ## Технології:
 
-`«1»` - HTML/CSS.
+- HTML/CSS.
 
-`«2»` - JavaScript.
+- JavaScript.
 
-`«3»` - Rect.
+- React.
 
-`«4»` - Redux.
+- Redux.
 
-`«5»` - Axios.
+- Axios.
 
-`«6»` - mockApi.
+- mockApi.
 
 ![Exercises page](./src/assets/readMe/exercises-page-min.jpg)
 ![Home page](./src/assets/readMe/present-img-min.jpg)
