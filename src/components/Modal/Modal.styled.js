@@ -123,7 +123,7 @@ export const BtnClose = styled.button`
 
 
 
-export const RentalButton = styled.button`
+export const RentalButton = styled.a`
   padding: 12px 50px;
   font-family: 'Manrope', sans-serif;
   font-weight: 500;
@@ -134,6 +134,7 @@ export const RentalButton = styled.button`
   border: none;
   border-radius: 12px;
   cursor: pointer;
+  text-decoration: none;
   transition: background-color 250ms linear;
   :hover {
     background-color: var(--secondary-color-btn);

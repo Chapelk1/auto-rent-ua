@@ -38,9 +38,9 @@ export function Modal({ onToggle, car, descriptionSecond, descriptionFirst }) {
     address,
     functionalities,
     accessories,
-    rentalCompany,
     mileage,
     rentalConditions,
+    photoLink,
   } = car;
 
   useEffect(() => {
@@ -70,18 +70,30 @@ export function Modal({ onToggle, car, descriptionSecond, descriptionFirst }) {
   const normalizeAge = Number(normalizeRentalConditions[0].split(' ').slice(2, 3));
  
   const normalizeMileage = (value) => {
-    if (value >= 1000) {
-      const num = value.toString()
-      const numSlice = num.slice(1,99);
+    if (value >= 100000) {
+      const num = value.toString();
+      const numSlice = num.slice(3, 99);
+      console.log(`${(num[0], num[1], num[2])},${numSlice}`);
+      return `${num[0]}${num[1]}${num[2]},${numSlice}`;
+      
+    } if (value >= 10000) {
+      const num = value.toString();
+      const numSlice = num.slice(2, 99);
+      return `${num[0]}${num[1]},${numSlice}`;
+    } if (value >= 1000) {
+      const num = value.toString();
+      const numSlice = num.slice(1, 99);
       return `${num[0]},${numSlice}`;
+    } else {
+      return value;
     }
-    return value; 
+  
   }
-  console.log(normalizeAge);
+  
   return createPortal(
     <BackDrop onClick={onClickBackDrop}>
       <Mod>
-        <Photo src={img} />
+        <Photo src={photoLink ? photoLink : img} alt={description} />
 
         <Title>
           {`${make} `}
@@ -104,10 +116,10 @@ export function Modal({ onToggle, car, descriptionSecond, descriptionFirst }) {
         <SubTitle>Accessories and functionalities:</SubTitle>
         <WrapDescr>
           {accessories.map(el => (
-            <Descr>{el}</Descr>
+            <Descr key={el}>{el}</Descr>
           ))}
           {functionalities.map(el => (
-            <Descr>{el}</Descr>
+            <Descr key={el}>{el}</Descr>
           ))}
 
           <Descr>{'desc'}</Descr>
@@ -142,12 +154,12 @@ export function Modal({ onToggle, car, descriptionSecond, descriptionFirst }) {
           </ConditionsItem>
         </ConditionsList>
 
-        <BtnClose>
+        <BtnClose onClick={onToggle}>
           <Icon>
             <use href={sprite + '#icon-x-2'} />
           </Icon>
         </BtnClose>
-        <RentalButton>Rental car</RentalButton>
+        <RentalButton href="tel:+380730000000">Rental car</RentalButton>
       </Mod>
     </BackDrop>,
     modalRoot

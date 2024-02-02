@@ -1,3 +1,4 @@
+@import 'components/Filters/Filters.styled.css';
 :root{
   --primary-text-color: #121417;
   --secondary-text-color: rgba(18, 20, 23, 0.50);
@@ -9,7 +10,10 @@
   --secondary-color-btn: #0B44CD;
   --bg-color-descr: #f9f9f9;
   --secondary-border-color: rgba(18, 20, 23, 0.1);
+  --select-bg: #f7f7fb;
+  --select-menu-text: rgba(18, 20, 23, 0.2);
 }
+
 html{
   box-sizing: border-box;
   
@@ -37,9 +41,9 @@ ul,ol{
 body {
   margin: 0;
   font-family: "Manrope", sans-serif;
-  background-color: rgb(87, 87, 87);
 }
 
 code {
   font-family: "Manrope", sans-serif;
 }
+

@@ -1,6 +1,12 @@
 import {  Outlet } from 'react-router-dom';
-import { Container, Header, Navigate, Link } from './Layout.styled';
+import {  Header, Navigate, Link } from './Layout.styled';
+
+
+
 export const Layout = () => {
+
+  
+
     return (
       <>
         <Header>
@@ -10,9 +16,9 @@ export const Layout = () => {
             <Link to="favorites">Favorites</Link>
           </Navigate>
         </Header>
-        <Container>
+        
           <Outlet />
-        </Container>
+        
       </>
     );
     

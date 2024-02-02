@@ -4,7 +4,8 @@ import { LoadMoreBtn } from 'components/LoadMore/LoadMore';
 import { Filters } from 'components/Filters/Filters';
 import { CarsList } from 'components/CarsList/CarsList';
 import { fetchCars } from 'redux/operationsCars';
-import {removePage} from 'redux/carsSlice'
+import { removePage, setFound } from 'redux/carsSlice';
+import {ContainerSecond} from 'components/SharedLayout/Layout.styled'
 const initialBrand = [
   {
     value: '',
@@ -253,10 +254,14 @@ const CatalogPage = () => {
         page: 1,
       })
     );
+    return () => {
+      dispatch(removePage());
+    }
   }, [dispatch]);
 
   const onChangeBrand = brand => {
     setBrand(brand.value);
+    dispatch(setFound());
   };
 
   const getBrandId = () => {
@@ -265,6 +270,7 @@ const CatalogPage = () => {
 
   const onChangePrice = price => {
     setPrice(price.value);
+    dispatch(setFound());
   };
 
   const getPriceId = () => {
@@ -303,7 +309,7 @@ const CatalogPage = () => {
   }
 
   return (
-    <>
+    <ContainerSecond>
       <Filters
         handlerSubmit={handlerSubmit}
         onChangeBrand={onChangeBrand}
@@ -315,7 +321,7 @@ const CatalogPage = () => {
       />
       <CarsList cars={filteredCars()} />
       {(noFound && !isLoading) && <LoadMoreBtn loadMore={fetchLoadMore} />}
-    </>
+    </ContainerSecond>
   );
 };
 

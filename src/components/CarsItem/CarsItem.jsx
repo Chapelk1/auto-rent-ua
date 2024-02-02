@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleFavorite, removeFavorites } from 'redux/favoritesSlice';
+import { toggleFavorite  } from 'redux/favoritesSlice';
 import { Modal } from 'components/Modal/Modal';
 import sprite from 'assets/icons.svg';
 
@@ -26,7 +26,6 @@ export const CarsItem = ({ car }) => {
       id,
       img,
       description,
-      fuelConsumption,
       engineSize,
       type,
       make,
@@ -34,11 +33,8 @@ export const CarsItem = ({ car }) => {
       year,
       rentalPrice,
       address,
-      functionalities,
-      accessories,
       rentalCompany,
-      mileage,
-      rentalConditions,
+      photoLink,
     } = car;
 
   const onToggleModal = () => {
@@ -51,21 +47,15 @@ export const CarsItem = ({ car }) => {
 
   const favoriteIcon = cars.find(car => car.id === id);
 
-  const descriptionFirst = [
+  const adress = [
     ...address.split(', ').slice(1, 3),
-    rentalCompany,
   ];
-  const descriptionSecond = [
-    type,
-    model,
-    id,
-    engineSize,
-  ];
+  
 
   return (
     <>
       <Item key={id}>
-        <Photo src={img} alt={description} />
+        <Photo src={photoLink ? photoLink : img} alt={description} />
         <WrapTitle>
           <Title>
             {`${make} `}
@@ -76,12 +66,13 @@ export const CarsItem = ({ car }) => {
           <Title>{rentalPrice}</Title>
         </WrapTitle>
         <WrapDescr>
-          {descriptionFirst.map(desc => (
-            <Descr>{desc}</Descr>
-          ))}
-          {descriptionSecond.map(desc => (
-            <Descr>{desc}</Descr>
-          ))}
+          <Descr>{adress[0]}</Descr>
+          <Descr>{adress[1]}</Descr>
+          <Descr>{rentalCompany}</Descr>
+          <Descr>{type}</Descr>
+          <Descr>{model}</Descr>
+          <Descr>{id}</Descr>
+          <Descr>{engineSize}</Descr>
         </WrapDescr>
 
         <HeartBtn onClick={handlerFavoriteBtn}>
@@ -95,8 +86,7 @@ export const CarsItem = ({ car }) => {
         <Modal
           onToggle={onToggleModal}
           car={car}
-          descriptionFirst={descriptionFirst}
-          descriptionSecond={descriptionSecond}
+          
         />
       )}
     </>

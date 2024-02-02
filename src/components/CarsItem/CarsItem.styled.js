@@ -74,6 +74,7 @@ export const LearnButton = styled.button`
   border-radius: 12px;
   cursor: pointer;
   transition: background-color 250ms linear;
+  outline: none;
   :hover {
     background-color: var(--secondary-color-btn);
   }
