@@ -23,8 +23,9 @@
 - Axios.
 
 - mockApi.
-- 
+  
 ## Встановлення та запуск
+
 - Клонувати репозиторій: git clone https://github.com/yourusername/CarRental.git
   
 - Встановити залежності: npm install
