@@ -43,7 +43,15 @@ export function Modal({ onToggle, car, descriptionSecond, descriptionFirst }) {
     photoLink,
   } = car;
 
+  
+
   useEffect(() => {
+    const onKeyDown = e => {
+      if (e.code === 'Escape') {
+        onToggle();
+      }
+    };
+
     window.addEventListener('keydown', onKeyDown);
     body.classList.add('hidden-scroll');
 
@@ -53,11 +61,7 @@ export function Modal({ onToggle, car, descriptionSecond, descriptionFirst }) {
     };
   }, [onToggle]);
 
-  const onKeyDown = e => {
-    if (e.code === 'Escape') {
-      onToggle();
-    }
-  };
+  
 
   const onClickBackDrop = e => {
     if (e.target === e.currentTarget) {
