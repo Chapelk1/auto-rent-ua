@@ -44,9 +44,9 @@
 - 
 ### Скріншоти
 
-![Home Page](./src/assets/readMe/exercises-page-min.jpg)
-![Home page](./src/assets/readMe/present-img-min.jpg)
-![Product page](./src/assets/readMe/products-page-min.jpg)
+![Home Page](./src/assets/readMe/HomePage.png)
+![Catalog page](./src/assets/readMe/CatalogPage.png)
+![Favorites page](./src/assets/readMe/FavoritesPage.png)
 
 
 
