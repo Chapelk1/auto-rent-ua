@@ -23,7 +23,17 @@
 - Axios.
 
 - mockApi.
+- 
+## Встановлення та запуск
+- Клонувати репозиторій: git clone https://github.com/yourusername/CarRental.git
+  
+- Встановити залежності: npm install
+  
+- Запустити сервер: npm start
 
+- Відкрити веб-браузер і перейти за адресою: http://localhost:3000/
+
+### [Посилання](<https://codeguide.co/>). на робочий приклад проекту.
 ![Exercises page](./src/assets/readMe/exercises-page-min.jpg)
 ![Home page](./src/assets/readMe/present-img-min.jpg)
 ![Product page](./src/assets/readMe/products-page-min.jpg)
@@ -31,19 +41,10 @@
 
 
 
-Список основних технологій, що використовуються в проекті:
-HTML/CSS
-JavaScript
-Node.js
-Express.js
-MongoDB
-Встановлення та запуск
-Клонувати репозиторій: git clone https://github.com/yourusername/CarRental.git
-Встановити залежності: npm install
-Запустити сервер: npm start
-Відкрити веб-браузер і перейти за адресою: http://localhost:3000/
+
+
 Демо
-Посилання на робочий приклад проекту або його демонстрацію, якщо доступно.
+
 Додаткова інформація
 Ліцензія
 Способи зв'язку з розробниками
