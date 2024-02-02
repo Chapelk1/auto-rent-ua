@@ -26,7 +26,7 @@
   
 ## Встановлення та запуск
 
-- Клонувати репозиторій: git clone https://github.com/yourusername/CarRental.git
+- Клонувати репозиторій: git clone https://github.com/Chapelk1/car-rent-ua
   
 - Встановити залежності: npm install
   
