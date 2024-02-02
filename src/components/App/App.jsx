@@ -6,7 +6,6 @@ import { Layout } from 'components/SharedLayout/Layout';
 
 export const App = () => {
   const location = useLocation();
-  console.log(location);
 
   return (
     <>
