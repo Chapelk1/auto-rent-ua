@@ -2,10 +2,11 @@
   --primary-text-color: #121417;
   --secondary-text-color: rgba(18, 20, 23, 0.50);
   --tertiary-text-color: #3470FF;
-  --bg-color: #FFFFFF;
+  --text-color: #FFFFFF;
   --secondary-bg-color: #F7F7FB;
   --primary-color-btn: #3470FF;
   --secondary-color-btn: #0B44CD;
+  --secondary-border-color: rgba(18, 20, 23, 0.1);
 }
 html{
   box-sizing: border-box;
