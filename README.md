@@ -11,7 +11,7 @@
 `«3»` - Зберігання улюблених автомобілів.
 
 
-## Обери вправи
+
 
 ![Exercises page](./src/assets/readMe/exercises-page-min.jpg)
 ![Home page](./src/assets/readMe/present-img-min.jpg)
