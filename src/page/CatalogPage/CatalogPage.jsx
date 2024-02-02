@@ -7,6 +7,10 @@ import { fetchCars } from 'redux/operationsCars';
 import {removePage} from 'redux/carsSlice'
 const initialBrand = [
   {
+    value: '',
+    label: 'All',
+  },
+  {
     value: 'Buick',
     label: 'Buick',
   },
@@ -93,6 +97,10 @@ const initialBrand = [
 ];
 
 const initialPrice = [
+  {
+    value: '',
+    label: 'All',
+  },
   {
     value: '30',
     label: '30',

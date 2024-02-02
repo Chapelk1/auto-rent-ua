@@ -1,15 +1,18 @@
 :root{
   --primary-text-color: #121417;
   --secondary-text-color: rgba(18, 20, 23, 0.50);
-  --tertiary-text-color: #3470FF;
+  --tertiary-text-color: #363535;
+  --accent-text-color: #3470FF;
   --text-color: #FFFFFF;
   --secondary-bg-color: #F7F7FB;
   --primary-color-btn: #3470FF;
   --secondary-color-btn: #0B44CD;
+  --bg-color-descr: #f9f9f9;
   --secondary-border-color: rgba(18, 20, 23, 0.1);
 }
 html{
   box-sizing: border-box;
+  
 }
 
 *,::after,::before{
@@ -19,9 +22,11 @@ html{
  img{
   width: 100%;
   height: auto;
+  display: block;
+
  }
 
- ul,ol,li,p,h1,h2,h3,h4,h5,h6{
+ ul,ol,li,p,h1,h2,h3,h4,h5,h6,button{
   padding: 0;
   margin: 0;
  }

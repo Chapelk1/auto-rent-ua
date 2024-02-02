@@ -33,17 +33,15 @@ export const Link = styled(NavLink)`
   color: black;
   font-weight: 500;
   background-color: var(--secondary-bg-color);
-  
 
   :hover {
     color: white;
     background-color: var(--primary-color-btn);
-    
   }
 
   &.active {
     color: white;
-    background-color: var(--secondary-color-btn);
-    
+
+    background-color: var(--primary-color-btn);
   }
 `;

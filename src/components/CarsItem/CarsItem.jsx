@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleFavorite, removeFavorites } from 'redux/favoritesSlice';
 import { Modal } from 'components/Modal/Modal';
+import sprite from 'assets/icons.svg';
 
 import {
   Item,
@@ -12,8 +13,9 @@ import {
   Title,
   Accent,
   WrapDescr,
-  CarDescr,
+  Descr,
   LearnButton,
+  IconAdd,
 } from './CarsItem.styled';
 
 export const CarsItem = ({ car }) => {
@@ -68,22 +70,35 @@ export const CarsItem = ({ car }) => {
           <Title>
             {`${make} `}
 
-            <Accent>{`${model}, `}</Accent>
-            {year}
+            <Accent>{`${model}`}</Accent>
+            {`, ${year}`}
           </Title>
           <Title>{rentalPrice}</Title>
         </WrapTitle>
         <WrapDescr>
-          {descriptionFirst.map(desc => <CarDescr>{desc}</CarDescr>)}
-          {descriptionSecond.map(desc => <CarDescr>{desc}</CarDescr>)}
+          {descriptionFirst.map(desc => (
+            <Descr>{desc}</Descr>
+          ))}
+          {descriptionSecond.map(desc => (
+            <Descr>{desc}</Descr>
+          ))}
         </WrapDescr>
 
-        <HeartBtn color={favoriteIcon} onClick={handlerFavoriteBtn}>
-          add
+        <HeartBtn onClick={handlerFavoriteBtn}>
+          <IconAdd color={favoriteIcon}>
+            <use href={sprite + '#icon-heart-2'} />
+          </IconAdd>
         </HeartBtn>
         <LearnButton onClick={onToggleModal}>Learn more</LearnButton>
       </Item>
-      {modalIsOpen && <Modal onToggle={onToggleModal} img={img} />}
+      {modalIsOpen && (
+        <Modal
+          onToggle={onToggleModal}
+          car={car}
+          descriptionFirst={descriptionFirst}
+          descriptionSecond={descriptionSecond}
+        />
+      )}
     </>
   );
 }
