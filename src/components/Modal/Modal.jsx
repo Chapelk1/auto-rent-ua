@@ -43,8 +43,6 @@ export function Modal({ onToggle, car, descriptionSecond, descriptionFirst }) {
     photoLink,
   } = car;
 
-  
-
   useEffect(() => {
     const onKeyDown = e => {
       if (e.code === 'Escape') {
@@ -61,8 +59,6 @@ export function Modal({ onToggle, car, descriptionSecond, descriptionFirst }) {
     };
   }, [onToggle]);
 
-  
-
   const onClickBackDrop = e => {
     if (e.target === e.currentTarget) {
       onToggle();
@@ -71,29 +67,31 @@ export function Modal({ onToggle, car, descriptionSecond, descriptionFirst }) {
 
   const adress = [...address.split(', ').slice(1, 3)];
   const normalizeRentalConditions = [...rentalConditions.split('\n')];
-  const normalizeAge = Number(normalizeRentalConditions[0].split(' ').slice(2, 3));
- 
-  const normalizeMileage = (value) => {
+  const normalizeAge = Number(
+    normalizeRentalConditions[0].split(' ').slice(2, 3)
+  );
+
+  const normalizeMileage = value => {
     if (value >= 100000) {
       const num = value.toString();
       const numSlice = num.slice(3, 99);
       console.log(`${(num[0], num[1], num[2])},${numSlice}`);
       return `${num[0]}${num[1]}${num[2]},${numSlice}`;
-      
-    } if (value >= 10000) {
+    }
+    if (value >= 10000) {
       const num = value.toString();
       const numSlice = num.slice(2, 99);
       return `${num[0]}${num[1]},${numSlice}`;
-    } if (value >= 1000) {
+    }
+    if (value >= 1000) {
       const num = value.toString();
       const numSlice = num.slice(1, 99);
       return `${num[0]},${numSlice}`;
     } else {
       return value;
     }
-  
-  }
-  
+  };
+
   return createPortal(
     <BackDrop onClick={onClickBackDrop}>
       <Mod>
