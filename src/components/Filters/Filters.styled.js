@@ -56,7 +56,7 @@ export const InputSecond = styled.input`
 export const InputContainer = styled.div`
   display: flex;
 `
-export const WrapInput = styled.div`
+export const Wrap = styled.div`
   position: relative;
 `;
 export const Placeholder = styled.p`
@@ -86,6 +86,18 @@ export const SubmitBtn = styled.button`
   :hover {
     background-color: var(--secondary-color-btn);
   }
+`;
+
+export const Label = styled.p`
+  position: absolute;
+  top: -26px;
+  left: 0;
+
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--label-text-color);
 `;
 
 

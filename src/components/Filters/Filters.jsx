@@ -1,17 +1,14 @@
-
 import Select from 'react-select';
 import {
   InputFirst,
   InputSecond,
   Form,
   SubmitBtn,
-  WrapInput,
+  Wrap,
   Placeholder,
   InputContainer,
+  Label,
 } from './Filters.styled';
-
-
-
 
 export const Filters = ({
   handlerSubmit,
@@ -24,24 +21,31 @@ export const Filters = ({
 }) => {
   return (
     <Form onSubmit={handlerSubmit}>
-      <Select
-        onChange={onChangeBrand}
-        value={getBrandId()}
-        options={initialBrand}
-        classNamePrefix="custom-select"
-        className="custom-select-container"
-        placeholder="Enter the text"
-      />
-      <Select
-        onChange={onChangePrice}
-        value={getPriceId()}
-        options={initialPrice}
-        classNamePrefix="custom-select-second"
-        className="custom-select-second-container"
-        placeholder="To $"
-      />
+      <Wrap>
+        <Select
+          onChange={onChangeBrand}
+          value={getBrandId()}
+          options={initialBrand}
+          classNamePrefix="custom-select"
+          className="custom-select-container"
+          placeholder="Enter the text"
+        />
+        <Label>Car brand</Label>
+      </Wrap>
+      <Wrap>
+        <Select
+          onChange={onChangePrice}
+          value={getPriceId()}
+          options={initialPrice}
+          classNamePrefix="custom-select-second"
+          className="custom-select-second-container"
+          placeholder="To $"
+        />
+        <Label>Price/ 1 hour</Label>
+      </Wrap>
+
       <InputContainer>
-        <WrapInput>
+        <Wrap>
           <InputFirst
             type="number"
             min={0}
@@ -49,9 +53,10 @@ export const Filters = ({
             pattern="[0-9]{1,7}"
             autoComplete="off"
           />
+          <Label>Сar mileage / km</Label>
           <Placeholder>From</Placeholder>
-        </WrapInput>
-        <WrapInput>
+        </Wrap>
+        <Wrap>
           <InputSecond
             type="number"
             min={0}
@@ -60,15 +65,10 @@ export const Filters = ({
             autoComplete="off"
           />
           <Placeholder>To</Placeholder>
-        </WrapInput>
+        </Wrap>
       </InputContainer>
 
       <SubmitBtn type="submit">Search</SubmitBtn>
     </Form>
   );
 };
-
-
-
-
-

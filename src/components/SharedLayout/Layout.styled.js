@@ -1,7 +1,5 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
-
-
 
 export const Container = styled.section`
   width: 100%;
@@ -25,7 +23,7 @@ export const Container = styled.section`
 export const ContainerSecond = styled.section`
   width: '1200px';
   margin: 0 auto;
-  padding: 100px 0px 100px 0px;
+  padding: 140px 0px 100px 0px;
   display: flex;
   flex-direction: column;
   height: '100%';
@@ -46,7 +44,6 @@ export const Header = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: center;
-
 `;
 
 export const Navigate = styled.nav`
